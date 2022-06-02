@@ -822,14 +822,14 @@ public class InAppWebViewChromeClient extends WebChromeClient implements PluginR
     startPhotoPickerIntent(filePathCallback, acceptType);
   }
 
-  @TargetApi(Build.VERSION_CODES.LOLLIPOP)
-  @Override
-  public boolean onShowFileChooser(WebView webView, ValueCallback<Uri[]> filePathCallback, FileChooserParams fileChooserParams) {
-    String[] acceptTypes = fileChooserParams.getAcceptTypes();
-    boolean allowMultiple = fileChooserParams.getMode() == WebChromeClient.FileChooserParams.MODE_OPEN_MULTIPLE;
-    Intent intent = fileChooserParams.createIntent();
-    return startPhotoPickerIntent(filePathCallback, intent, acceptTypes, allowMultiple);
-  }
+//  @TargetApi(Build.VERSION_CODES.LOLLIPOP)
+//  @Override
+//  public boolean onShowFileChooser(WebView webView, ValueCallback<Uri[]> filePathCallback, FileChooserParams fileChooserParams) {
+//    String[] acceptTypes = fileChooserParams.getAcceptTypes();
+//    boolean allowMultiple = fileChooserParams.getMode() == WebChromeClient.FileChooserParams.MODE_OPEN_MULTIPLE;
+//    Intent intent = fileChooserParams.createIntent();
+//    return startPhotoPickerIntent(filePathCallback, intent, acceptTypes, allowMultiple);
+//  }
 
   @Override
   public boolean onActivityResult(int requestCode, int resultCode, Intent data) {
